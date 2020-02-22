@@ -14,7 +14,12 @@ variables:
 
 steps:
 - powershell: |
+<<<<<<< HEAD
     echo "$SEARCHFOR".Splsit(',') | ls -r | % { $_.FullName }
+=======
+    echo "$Env:SEARCHFOR"
+    echo "$Env:SEARCHFOR" | ls -r | % { $_.FullName }
+>>>>>>> 3d77e9c292595cfaab892e688e3352f96a75a3b8
   displayName: List Directory Contents
 # - script: dotnet build --configuration $(buildConfiguration)
 #   displayName: 'dotnet build $(buildConfiguration)'
