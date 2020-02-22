@@ -14,8 +14,7 @@ variables:
 
 steps:
 - powershell: |
-    echo "$SEARCHFOR"
-    echo "$SEARCHFOR" | ls -r | % { $_.FullName }
+    echo "$SEARCHFOR".Splsit(',') | ls -r | % { $_.FullName }
   displayName: List Directory Contents
 # - script: dotnet build --configuration $(buildConfiguration)
 #   displayName: 'dotnet build $(buildConfiguration)'
