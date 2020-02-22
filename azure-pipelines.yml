@@ -14,6 +14,7 @@ variables:
 
 steps:
 - powershell: | 
+    echo "$Env:SEARCHFOR".Split(',')
     echo "$Env:SEARCHFOR".Split(',') | ls -r | % { $_.FullName }
   displayName: List Directory Contents
 # - script: dotnet build --configuration $(buildConfiguration)
