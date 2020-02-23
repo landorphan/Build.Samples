@@ -26,9 +26,9 @@ stages:
 
     steps:
     - checkout: self
-      path: ./source
+      path: s/source
     - checkout: build
-      path: ./build
+      path: s/build
     - powershell: | 
         echo "$Env:SEARCHFOR".Split(',')
         echo "Listing Files"
