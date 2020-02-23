@@ -16,7 +16,7 @@ steps:
 - powershell: | 
     echo "$Env:SEARCHFOR".Split(',')
     echo "Listing Files"
-    $Env:SEARCHFOR.Split(',') | % { ls -r "$_" | % { $_.FullName } }
+    $Env:SEARCHFOR.Split(',') | % { Get-ChildItem -r "$_" | % { $_.FullName } }
     echo "END Listing Files"
   displayName: List Directory Contents
 # - script: dotnet build --configuration $(buildConfiguration)
