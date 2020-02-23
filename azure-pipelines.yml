@@ -15,6 +15,7 @@ variables:
 
 trigger:
 - master
+- master@build
 
 stages: 
   - template: prepare.yml@build
