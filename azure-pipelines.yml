@@ -31,8 +31,9 @@ stages:
         echo "$Env:SEARCHFOR".Split(',')
         echo "Listing Files"
         ls
-#        $Env:SEARCHFOR.Split(',') | % { Get-ChildItem -r "$_" | % { $_.FullName } }
+        # $Env:SEARCHFOR.Split(',') | % { Get-ChildItem -r "$_" | % { $_.FullName } }
         echo "END Listing Files"
+
       displayName: List Directory Contents
     # - script: dotnet build --configuration $(buildConfiguration)
     #   displayName: 'dotnet build $(buildConfiguration)'
