@@ -10,6 +10,11 @@ resources:
       name: Landorphan/Build
       source: Landorphan/Build
       endpoint: landorphan
+    - repository: tools
+      type: github
+      name: Landorphan/DotNetCoreBuildTools
+      source: Landorphan/DotNetCoreBuildTools
+      endpoint: landorphan
   pipelines:
     - pipeline: Landorphan_Build
       project: OSS-Master-Build
