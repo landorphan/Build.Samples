@@ -29,14 +29,6 @@ stages:
       path: s/source
     - checkout: build
       path: s/build
-    - powershell: | 
-        echo "$Env:SEARCHFOR".Split(',')
-        echo "Listing Files"
-        pwd
-        ls
-        # $Env:SEARCHFOR.Split(',') | % { Get-ChildItem -r "$_" | % { $_.FullName } }
-        echo "END Listing Files"
-
-      displayName: List Directory Contents
+    - template: build/prepare.yml
     # - script: dotnet build --configuration $(buildConfiguration)
     #   displayName: 'dotnet build $(buildConfiguration)'
