@@ -17,18 +17,6 @@ trigger:
 - master
 
 stages: 
-- stage: PrepareStage
-
-  jobs: 
-  - job: PrepareJob
-    pool:
-      vmImage: 'ubuntu-latest'
-
-    steps:
-    - checkout: self
-      path: s/source
-    - checkout: build
-      path: s/build
-    - template: prepare.yml@build
+  - template: prepare.yml@build
     # - script: dotnet build --configuration $(buildConfiguration)
     #   displayName: 'dotnet build $(buildConfiguration)'
