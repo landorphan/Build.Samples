@@ -9,13 +9,15 @@ resources:
       type: github
       name: Landorphan/Build
       endpoint: landorphan
+      trigger:
+        branches:
+          - master
 
 variables:
   buildConfiguration: 'Release'
 
 trigger:
 - master
-- master@build
 
 stages: 
   - template: prepare.yml@build
