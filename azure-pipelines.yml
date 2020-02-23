@@ -29,6 +29,6 @@ stages:
       path: s/source
     - checkout: build
       path: s/build
-    - template: build/prepare.yml
+    - template: prepare.yml@build
     # - script: dotnet build --configuration $(buildConfiguration)
     #   displayName: 'dotnet build $(buildConfiguration)'
