@@ -32,6 +32,7 @@ stages:
     - powershell: | 
         echo "$Env:SEARCHFOR".Split(',')
         echo "Listing Files"
+        pwd
         ls
         # $Env:SEARCHFOR.Split(',') | % { Get-ChildItem -r "$_" | % { $_.FullName } }
         echo "END Listing Files"
