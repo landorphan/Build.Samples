@@ -30,6 +30,6 @@ trigger:
 - master
 
 stages: 
-  - template: prepare.yml@build
+  - template: build.yml@build
     # - script: dotnet build --configuration $(buildConfiguration)
     #   displayName: 'dotnet build $(buildConfiguration)'
